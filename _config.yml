@@ -3,7 +3,7 @@ title:
 email: your-email@domain.com
 baseurl: "/1988" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-description: "서울 강남의 중심, 청담동에 위치한 신축빌딩 청담1988은<br>프리미엄과 실용성을 모두 갖춘 공간을 제공합니다."
+description: "서울 강남의 중심, 청담동에 위치한 신축빌딩 청담1988은 프리미엄과 실용성을 모두 갖춘 공간을 제공합니다."
 
 # Color settings (hex-codes without the leading hash-tag)
 color:
