@@ -17,8 +17,6 @@ footer: CHEONGDAM 1988
 social:
   - title: 네이버 지도
     url: https://m.place.naver.com/share?id=1098490023&tabsPath=%2Fhome&appMode=detail
-  - title: 카카오 지도
-    url: https://place.map.kakao.com/m/1853586279
 
 # Build settings
 markdown: kramdown
