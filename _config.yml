@@ -16,7 +16,7 @@ footer: CHEONGDAM 1988
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
   - title: 
-    url: https://m.place.naver.com/share?id=1098490023&tabsPath=%2Fhome&appMode=detail
+    url: https://m.place.naver.com/place/1098490023/home
 
 # Build settings
 markdown: kramdown
