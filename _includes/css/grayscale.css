@@ -85,7 +85,6 @@ a:focus {
 
 .navbar-custom {
     margin-bottom: 0;
-    border-bottom: 1px solid rgba(255,255,255,.3);
     text-transform: uppercase;
     font-family: 'IBM Plex Sans KR', 'Montserrat', 'Lora', sans-serif;
     background-color: {{ site.color.primary-dark }};
@@ -150,7 +149,7 @@ a:focus {
     }
 
     .navbar-custom.top-nav-collapse {
-        border-bottom: 1px solid rgba(255,255,255,.3);
+        border-bottom: 0px solid rgba(255,255,255,.3);
     }
 }
 
@@ -175,13 +174,19 @@ a:focus {
     vertical-align: middle;
 }
 
+.intro .intro-body p {
+    font-weight: 300;
+}
+
 .intro .intro-body .brand-heading {
     font-size: 40px;
 }
 
 .intro .intro-body .intro-text {
     font-size: 18px;
+    font-weight: 300;
 }
+
 
 .brand-logo {
     max-width: 30%; /* Adjust the size of the logo */
@@ -321,8 +326,8 @@ a:focus {
 /* Add padding for mobile screens */
 @media (max-width: 768px) { /* Adjust the max-width value as needed */
     .content-section {
-      padding-top: 40px; /* Adjust the value for desired padding */
-      padding-bottom: 40px; /* Adjust the value for desired padding */
+      padding-top: 80px; /* Adjust the value for desired padding */
+      padding-bottom: 80px; /* Adjust the value for desired padding */
     }
   }
 
