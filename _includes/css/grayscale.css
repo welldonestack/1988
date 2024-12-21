@@ -4,25 +4,21 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
-body {
+/* Base Styles */
+html, body {
     width: 100%;
     height: 100%;
+}
+
+body {
     font-family: 'IBM Plex Sans KR', 'Montserrat', 'Lora', sans-serif;
     color: #f2f2f2;
     background-color: {{ site.color.primary-dark }};
+    webkit-tap-highlight-color: rgba(255,255,255,.2);
 }
 
-html {
-    width: 100%;
-    height: 100%;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
     margin: 0 0 7px;
     font-size: 18px;
     text-transform: uppercase;
@@ -37,35 +33,24 @@ p {
     font-size: 17px;
     line-height: 1.5;
     font-weight: 100;
-    word-break: keep-all;      /* Prevents breaking within Korean words */
-    word-wrap: break-word;     /* Allows breaking between words */
-    overflow-wrap: break-word; /* Modern version of word-wrap */
+    word-break: keep-all;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 @media(min-width:767px) {
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-    margin: 0 0 7px;
-    font-size: 25px;
-    text-transform: uppercase;
-    font-family: 'IBM Plex Sans KR', 'Montserrat', 'Lora', sans-serif;
-    font-weight: 300;
-    letter-spacing: 1px;
-    color: #fff;
+    h1, h2, h3, h4, h5, h6 {
+        font-size: 25px;
     }
+    
     p {
         margin: 0 0 40px;
         font-size: 22px;
         line-height: 1.6;
-        font-weight: 100;
     }
 }
 
+/* Links */
 a {
     color: {{ site.color.links }};
     -webkit-transition: all .2s ease-in-out;
@@ -73,16 +58,12 @@ a {
     transition: all .2s ease-in-out;
 }
 
-a:hover,
-a:focus {
-    text-decoration: none;
-    color: #11505d;
+a:hover, a:focus {
+    text-decoration: underline;
+    color: #ffff;
 }
 
-.light {
-    font-weight: 400;
-}
-
+/* Navigation */
 .navbar-custom {
     margin-bottom: 0;
     text-transform: uppercase;
@@ -153,7 +134,7 @@ a:focus {
     }
 }
 
-
+/* Intro Section */
 .intro {
     display: table;
     width: 100%;
@@ -187,15 +168,6 @@ a:focus {
     font-weight: 300;
 }
 
-
-.brand-logo {
-    max-width: 30%; /* Adjust the size of the logo */
-    height: auto;
-    margin-bottom: 21px; /* Add space below the logo */
-}
-
-
-
 @media(min-width:300px) {
     .intro {
         height: 100%;
@@ -211,136 +183,14 @@ a:focus {
     }
 }
 
-.btn-circle {
-    width: 40px; /* Reduce the button width */
-    height: 40px; /* Reduce the button height */
-    border-radius: 50%; /* Maintain the circular shape */
-    font-size: 10px; /* Adjust icon size */
-    line-height: 25px; /* Align icon vertically */
-    text-align: center; /* Center-align the icon */
-
-    margin-top: 15px;
-    padding: 7px 16px;
-    border: 1px solid #fff;
-
-    color: #fff;
-    background: 0 0;
-    -webkit-transition: background .3s ease-in-out;
-    -moz-transition: background .3s ease-in-out;
-    transition: background .3s ease-in-out;
+/* Brand Logo */
+.brand-logo {
+    max-width: 30%;
+    height: auto;
+    margin-bottom: 21px;
 }
 
-.btn-circle:hover,
-.btn-circle:focus {
-    outline: 0;
-    color: #fff;
-    background: rgba(255,255,255,.1);
-}
-
-.btn-circle i.animated {
-    -webkit-transition-property: -webkit-transform;
-    -webkit-transition-duration: 1s;
-    -moz-transition-property: -moz-transform;
-    -moz-transition-duration: 1s;
-}
-
-.btn-circle:hover i.animated {
-    -webkit-animation-name: pulse;
-    -moz-animation-name: pulse;
-    -webkit-animation-duration: 1.5s;
-    -moz-animation-duration: 1.5s;
-    -webkit-animation-iteration-count: infinite;
-    -moz-animation-iteration-count: infinite;
-    -webkit-animation-timing-function: linear;
-    -moz-animation-timing-function: linear;
-}
-
-@-webkit-keyframes pulse {    
-    0 {
-        -webkit-transform: scale(1);
-        transform: scale(1);
-    }
-
-    50% {
-        -webkit-transform: scale(1.2);
-        transform: scale(1.2);
-    }
-
-    100% {
-        -webkit-transform: scale(1);
-        transform: scale(1);
-    }
-}
-
-@-moz-keyframes pulse {    
-    0 {
-        -moz-transform: scale(1);
-        transform: scale(1);
-    }
-
-    50% {
-        -moz-transform: scale(1.2);
-        transform: scale(1.2);
-    }
-
-    100% {
-        -moz-transform: scale(1);
-        transform: scale(1);
-    }
-}
-
-.content-section {
-    padding-top: 100px 0;
-}
-
-#download.content-section {
-    padding: 0; /* Remove all padding */
-    margin: 0; /* Remove any default margin */
-}
-
-.download-section {
-    width: 100%;
-    min-height: 600px; /* Ensure a minimum height for larger screens */
-    padding: 0; /* Remove top/bottom padding for better centering */
-    color: #fff;
-    background: url(/img/1988-office-01.png) no-repeat center center scroll;
-    background-color: {{ site.color.primary-dark }};
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-
-    display: flex; /* Enable Flexbox */
-    flex-direction: column; /* Align items vertically */
-    justify-content: center; /* Center content vertically */
-    align-items: center; /* Center content horizontally */
-}
-
-
-#map {
-    width: 100%;
-    height: 200px;
-    margin-top: 100px;
-}
-
-/* Add padding for mobile screens */
-@media (max-width: 768px) { /* Adjust the max-width value as needed */
-    .content-section {
-      padding-top: 80px; /* Adjust the value for desired padding */
-      padding-bottom: 80px; /* Adjust the value for desired padding */
-    }
-  }
-
-@media(min-width:767px) {
-    .content-section {
-        padding: 100px 0; /* Reduce padding for smaller devices */
-    }
-
-    .download-section {
-        padding: 80px 0; /* Adjust padding to avoid cramped look */
-    }
-}
-
+/* Buttons */
 .btn {
     text-transform: uppercase;
     font-family: 'IBM Plex Sans KR', 'Montserrat', 'Lora', sans-serif;
@@ -364,11 +214,118 @@ a:focus {
     background-color: {{ site.color.links }};
 }
 
+.btn.btn-default.btn-lg {
+    margin-top: 10px;
+}
+
+.btn-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 10px;
+    line-height: 25px;
+    text-align: center;
+    margin-top: 15px;
+    padding: 7px 16px;
+    border: 1px solid #fff;
+    color: #fff;
+    background: 0 0;
+    -webkit-transition: background .3s ease-in-out;
+    -moz-transition: background .3s ease-in-out;
+    transition: background .3s ease-in-out;
+}
+
+.btn-circle:hover,
+.btn-circle:focus {
+    outline: 0;
+    color: #fff;
+    background: rgba(255,255,255,.1);
+}
+
+/* Content Sections */
+.content-section {
+    padding-top: 100px 0;
+}
+
+#download.content-section {
+    padding: 0;
+    margin: 0;
+}
+
+.download-section {
+    width: 100%;
+    min-height: 600px;
+    padding: 0;
+    color: #fff;
+    background: url(/img/1988-office-01.png) no-repeat center center scroll;
+    background-color: {{ site.color.primary-dark }};
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Map */
+#map {
+    width: 100%;
+    height: 200px;
+    margin-top: 100px;
+}
+
+/* Social Buttons */
 ul.banner-social-buttons {
     margin-top: 0;
 }
 
+/* Footer */
+footer {
+    background-color: #222;
+    color: #f1f1f1;
+    padding: 10px 0;
+}
 
+footer p {
+    font-size: 14px !important;
+    margin: 0;
+}
+
+/* Selection Styles */
+::-moz-selection, ::selection {
+    text-shadow: none;
+    background: rgba(255,255,255,.2);
+}
+
+img::-moz-selection, img::selection {
+    background: 0 0;
+}
+
+/* About Image */
+.about-image {
+    max-width: 60%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .content-section {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .about-image {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    footer p {
+        font-size: 10px !important;
+    }
+}
 
 @media(max-width:1199px) {
     ul.banner-social-buttons {
@@ -388,43 +345,12 @@ ul.banner-social-buttons {
     }
 }
 
-footer {
-    background-color: #222; /* Light grey background */
-    color: #f1f1f1; /* Optional: Darker text color for contrast */
-    padding: 10px 0;
-}
+@media(min-width:767px) {
+    .content-section {
+        padding: 100px 0;
+    }
 
-footer p {
-    font-size: 14px !important; /* Force the style to apply */
-    margin: 0;
-}
-
-::-moz-selection {
-    text-shadow: none;
-    background: #fcfcfc;
-    background: rgba(255,255,255,.2);
-}
-
-::selection {
-    text-shadow: none;
-    background: #fcfcfc;
-    background: rgba(255,255,255,.2);
-}
-
-img::selection {
-    background: 0 0;
-}
-
-img::-moz-selection {
-    background: 0 0;
-}
-
-body {
-    webkit-tap-highlight-color: rgba(255,255,255,.2);
-}
-
-.about-image {
-    max-width: 70%;
-    height: auto;
-    border-radius: 8px;
+    .download-section {
+        padding: 80px 0;
+    }
 }
