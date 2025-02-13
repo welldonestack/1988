@@ -142,7 +142,7 @@ a:hover, a:focus {
     padding: 100px 0;
     text-align: center;
     color: #fff;
-    background: url(/img/1988-website-main.gif) no-repeat bottom center scroll;
+    background: url(/img/1988-website-main-01.gif) no-repeat bottom center scroll;
     background-color: {{ site.color.primary-dark }};
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -257,7 +257,7 @@ a:hover, a:focus {
     min-height: 600px;
     padding: 0;
     color: #fff;
-    background: url(/img/1988-office-01.png) no-repeat center center scroll;
+    background: url(/img/1988-facade-02.png) no-repeat center center scroll;
     background-color: {{ site.color.primary-dark }};
     -webkit-background-size: cover;
     -moz-background-size: cover;
